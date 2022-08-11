@@ -1,0 +1,11 @@
+.banner {
+  background-image: url("C:\Users\Istofar\Videos\Borderlands 3\b3.png") center
+    center;
+  height: 50vh;
+  position: relative;
+}
+
+.banner_info {
+  background-color: black;
+  color: white;
+}
