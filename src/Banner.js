@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Banner.css";
 import { Button } from "@material-ui/core";
+import Search from "@material-ui/icons/Search";
 
 function Banner() {
+  const [showSearch, setShowSearch] = useState(false);
+
   return (
-    <div claassname="banner">
+    <div className="banner">
+      <div className="banner_search">
+
+        {showSearch && <Search />}
+        {showSearch && <h1>SHOW DATE PICKER</h1>}
+        <Button
+          onClick={() => setShowSearch(!showSearch)}
+          className="banner_searchButton"
+          variant="outlined"
+        >
+          Search Dates
+        </Button>
+      </div>
       <div className="banner_info">
-      <h1>Get out and stress your imagination</h1>
-      <h5>
-        Plan a different kind of Getaway to uncover the hidden gems near you
-      </h5>
-      <Button variant="outlined">Explore Nearby</Button>
+        <h1>Get out and stress your imagination</h1>
+        <h5>
+          Plan a different kind of Getaway to uncover the hidden gems near you
+        </h5>
+        <Button variant="outlined">Explore Nearby</Button>
       </div>
     </div>
   );
