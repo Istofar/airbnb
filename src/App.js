@@ -3,7 +3,8 @@ import "./App.css";
 import Home from "./Home";
 import Header from "./Header";
 import Footer from "./Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SearchPage from "./SearchPage";
 
 function App() {
   return (
@@ -11,18 +12,19 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Home />
 
-          <SearchPage />
-        </Switch>
+        <Routes>
+          <Route path="/search" element={<SearchPage />} />
+
+          <Route path="/" element={<Home />} />
+        </Routes>
+
         <Footer />
       </Router>
 
-      {/* Home */}
       {/*Banner*/}
+      {/* Home */}
       {/*Search*/}
-
       {/*Cards*/}
       {/*Footer*/}
 
